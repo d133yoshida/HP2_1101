@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            text-align: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        form {
+            width: 100%;
+            max-width: 900px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .Form-Item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            width: 100%;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+        .Form-Item-Label {
+            font-size: 1em;
+            color: #333;
+            width: 200px;
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .Form-Item-Label-Required,
+        .Form-Btn-Free {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .Form-Item-Label-Required {
+            color: #fff;
+            background-color: #ffe656;
+            border: 1px solid #ffe656;
+        }
+
+        .Form-Btn-Free {
+            color: #555;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        .Form-Item-Input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .Form-Item-Textarea {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+            height: 150px;
+            width: 100%;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        label {
+            font-size: 0.95em;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .Form-Btn {
+            width: 100%;
+            max-width: 200px;
+            padding: 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #888;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px auto 0;
+            display: block;
+            text-align: center;
+        }
+
+        .Form-Btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>お問い合わせフォームサンプル</h1>
+    <form action="#" method="post">
+        <div class="Form">
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                <input type="text" name="name" class="Form-Item-Input" placeholder="例）電子太郎" required>
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required Form-Btn-Free">任意</span>電話番号</p>
+                <input type="text" name="tel" class="Form-Item-Input" placeholder="例）000-0000-0000">
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                <input type="email" name="mail" class="Form-Item-Input" placeholder="例）example@abc.com" required>
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                <textarea class="Form-Item-Textarea" name="inquiry" required></textarea>
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required Form-Btn-Free">任意</span>興味があるもの</p>
+                <input type="checkbox" id="HTML" name="interest" value="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="css" name="interest" value="css">
+                <label for="css">css</label>
+                <input type="checkbox" id="JavaScript" name="interest" value="JavaScript">
+                <label for="JavaScript">JavaScript</label>
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お知らせメール</p>
+                <label><input type="radio" name="ml" value="送信してもよい" checked required>送信してもよい</label>
+                <label><input type="radio" name="ml" value="送信しない">送信しない</label>
+            </div><input type="submit" class="Form-Btn" value="送信する">
+        </div>
+    </form>
+</body>
+
+</html>
